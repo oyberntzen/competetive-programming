@@ -1,0 +1,105 @@
+dir = 0:
+- face: 1
+    - face: 6
+    - oldx: 12
+    - oldy: (0-3)
+    - newx: 15
+    - newy: (8-11) -oldy
+    - dir: 2
+- face: 4
+    - face: 6
+    - oldx: 12
+    - oldy: (4-7)
+    - newx: (12-15) -oldy
+    - newy: 8
+    - dir: 1
+- face: 6
+    - face: 1
+    - oldx: 15
+    - oldy: (8-11)
+    - newx: 11
+    - newy: (0-3) -oldy
+    - dir: 2
+
+dir = 1:
+- face: 2
+    - face: 5
+    - oldx: (0-3)
+    - oldy: 7
+    - newx: (8-11) -oldx
+    - newy: 11
+    - dir: 3
+- face: 3
+    - face: 5
+    - oldx: (4-7)
+    - oldy: 7
+    - newx: 8
+    - newy: (8-11) -oldx
+    - dir: 0
+- face: 5
+    - face: 2
+    - oldx: (8-11)
+    - oldy: 11
+    - newx: (0-3) -oldx
+    - newy: 7
+    - dir: 3
+- face: 6
+    - face: 2
+    - oldx: (12-15)
+    - oldy: 11
+    - newx: 0
+    - newy: (4-7) -oldx
+    - dir: 0
+
+dir = 2:
+- face: 1
+    - face: 3
+    - oldx: 8
+    - oldy: (0-3)
+    - newx: (0-3) oldy
+    - newy: 4
+    - dir: 1
+- face: 2
+    - face: 6
+    - oldx: 0
+    - oldy: (4-7)
+    - newx: (12-15) -oldy
+    - newy: 11
+    - dir: 3
+- face: 5
+    - face: 3
+    - oldx: 8
+    - oldy: (8-11)
+    - newx: (4-7) -oldy
+    - newy: 7
+    - dir: 3
+
+dir = 3:
+- face: 2
+    - face: 1
+    - oldx: (0-3)
+    - oldy: 4
+    - newx: (8-11) -oldx
+    - newy: 0
+    - dir: 1
+- face: 3
+    - face: 1
+    - oldx: (4-7)
+    - oldy: 4
+    - newx: 8
+    - newy: (0-3) oldx
+    - dir: 0
+- face: 1
+    - face: 2
+    - oldx: (8-11)
+    - oldy: 0
+    - newx: (0-3) -oldx
+    - newy: 4
+    - dir: 1
+- face: 6
+    - face: 4
+    - oldx: (12-15)
+    - oldy: 9
+    - newx: 11
+    - newy: (4-7) -oldx
+    - dir: 2

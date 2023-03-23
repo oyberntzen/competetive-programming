@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -74,19 +76,28 @@ int compare(string left, string right) {
     return 0;
 }
 
+bool sort_compare(string left, string right) {
+    int result = compare(left, right);
+    if (result == 1) return true;
+    return false;
+}
+
 int main() {
     freopen("input.txt", "r", stdin);
-    string l1, l2;
-    int i = 1;
-    int sum = 0;
-    do {
-        getline(cin, l1);
-        getline(cin, l2);
-        int result = compare(l1, l2);
-        //printf("%d\n", result);
-        if (result == 1) sum += i;
-
-        i++;
-    } while (getline(cin, l1));
-    printf("%d\n", sum);
+    string line;
+    vector<string> packets;
+    while (getline(cin, line)) {
+        if (line.size() > 0) packets.push_back(line);
+    }
+    packets.push_back("[[2]]");
+    packets.push_back("[[6]]");
+    sort(packets.begin(), packets.end(), sort_compare);
+    int result = 1;
+    for (int i = 0; i < packets.size(); i++) {
+        if (packets[i] == "[[2]]" || packets[i] == "[[6]]") {
+            result *= i+1;
+        }
+        //printf("%s\n", packets[i].c_str());
+    }
+    printf("%d\n", result);
 }
