@@ -11,7 +11,7 @@ int main() {
 
     for (int i = 0; i < t; i++) {
         ll x, y;
-        scanf("%lld %lld", &x, &y);
+        scanf("%lld %lld", &y, &x);
 
         ll layer = max(x, y);
         ll value = layer*layer;
